@@ -62,7 +62,9 @@ app.get('/api/users',async(req,res)=>{
 
 
 
-
+app.listen(process.env.PORT,(req,res)=>{
+    console.log("Server Running...")
+}) 
 
 module.exports = (req, res) => {
     app(req, res);
