@@ -14,7 +14,9 @@ const user=mongoose.model('user',{
     email:String
 })
 
-
+app.get("/",(req,res)=>{
+    res.send("Server is Running...")
+})
 
 //Endpoint to handle user registration...
 app.post('/api/register',async(req,res)=>{
