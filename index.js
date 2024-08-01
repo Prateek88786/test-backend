@@ -8,10 +8,11 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: 'http://localhost:3000/',
+    origin: 'http://localhost:3000', // Update to match your frontend's URL
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
 }));
+
 
 
 app.use(express.json())
