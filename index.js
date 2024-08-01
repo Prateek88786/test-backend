@@ -4,16 +4,7 @@ const app=express()
 const mongoose=require('mongoose')
 const connectToDB=require('./dbConnect.js')
 const cors = require('cors');
-
-
-
-app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
-}));
-
-
+app.use(cors());
 
 app.use(express.json())
 connectToDB()
@@ -33,7 +24,7 @@ app.get("/",(req,res)=>{
 //Endpoint to handle user registration...
 app.post('/api/register',async(req,res)=>{
     const { name, email, age } = req.body;
-    age=parseInt(age);
+    age=parseInt(age)
     const errors = [];
 
     // Validate name...
