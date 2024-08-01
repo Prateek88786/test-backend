@@ -3,6 +3,9 @@ const express=require('express')
 const app=express()
 const mongoose=require('mongoose')
 const connectToDB=require('./dbConnect.js')
+const cors = require('cors');
+app.use(cors());
+
 app.use(express.json())
 connectToDB()
 
