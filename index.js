@@ -4,7 +4,15 @@ const app=express()
 const mongoose=require('mongoose')
 const connectToDB=require('./dbConnect.js')
 const cors = require('cors');
-app.use(cors());
+
+
+
+app.use(cors({
+    origin: 'http://localhost:3000/',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
+
 
 app.use(express.json())
 connectToDB()
