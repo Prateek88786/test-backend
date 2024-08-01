@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
 
 //Endpoint to handle user registration...
 app.post('/api/register',async(req,res)=>{
-    const { name, email, age } = req.body;
+    let { name, email, age } = req.body;
     age=parseInt(age)
     const errors = [];
 
